@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.App {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Smooth scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8941f;
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(212, 175, 55, 0.3);
+  color: #fff;
+}

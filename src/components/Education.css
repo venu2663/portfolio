@@ -1,0 +1,150 @@
+.education {
+  padding: 100px 2rem;
+  background: #000000;
+  min-height: 100vh;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.education-grid.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.education-card {
+  background: rgba(212, 175, 55, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 12px;
+  padding: 2.5rem;
+  display: flex;
+  gap: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.education-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #d4af37 0%, transparent 100%);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.education-card:hover::before {
+  transform: scaleY(1);
+}
+
+.education-card:hover {
+  background: rgba(212, 175, 55, 0.1);
+  transform: translateX(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.education-icon {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 12px;
+  color: #d4af37;
+}
+
+.education-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.education-content {
+  flex: 1;
+}
+
+.education-degree {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.education-field {
+  color: #d4af37;
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+}
+
+.education-institution {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.education-location {
+  color: #888;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.education-period {
+  display: inline-block;
+  color: #d4af37;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.education-achievements {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+.education-achievements li {
+  color: #aaa;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.education-achievements li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #d4af37;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education-card {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .education-icon {
+    align-self: flex-start;
+  }
+}
+
